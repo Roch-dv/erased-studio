@@ -21,7 +21,6 @@ p {
 }
 
 #background {
-  background: url('../images/erased-1.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
