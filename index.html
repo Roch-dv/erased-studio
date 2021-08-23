@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html id="background">
 
   <head>
     <title>Erased Studio</title>
@@ -9,16 +9,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="./css/style.css"/>
   </head>
 
   <body>
-    <h1>Coucou</h1>
+    <div class="background">
+      <div class="container">
+        <div class="name">
+          <h1>ER:AS:ED</h1>
+          <h1>ST.UD.IO</h1>
+        </div>
+        <div class="container-right">
+          <div class="infos">
+            <p>SET DESIGN</p>
+            <p>CREATIVE DIRECTION</p>
+            <p>ARCHITECTURE</p>
+          </div>
+          <div class="space">
 
-    <script></script>
+          </div>
+          <div class="contact">
+            <p><a href="tel:+32493646839" target="_blank">+32.493.64.68.39</a></p>
+            <p><a href="mailto:infos@erased-studio.com" target="_blank">INFOS@ERASED-STUDIO.COM</a></p>
+            <p><a href="https://www.instagram.com/erasedstudio/" target="_blank">@ERASEDSTUDIO</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      setInterval(function(){
+        let h1 = document.querySelectorAll('.name h1');
+        h1[0].innerHTML === "ER:AS:ED" ? h1[0].innerHTML = "13:06:26" : h1[0].innerHTML = "ER:AS:ED";
+        h1[1].innerHTML === "ST.UD.IO" ? h1[1].innerHTML = "27.01.21" : h1[1].innerHTML = "ST.UD.IO";
+        }, 5000);
+
+      setInterval(function(){
+        let p = document.querySelectorAll('.infos p');
+        p[0].innerHTML === "SET DESIGN" ? p[0].innerHTML = "EPHEMERAL" : p[0].innerHTML = "SET DESIGN";
+        p[1].innerHTML === "CREATIVE DIRECTION" ? p[1].innerHTML = "TIMELESS" : p[1].innerHTML = "CREATIVE DIRECTION";
+        p[2].innerHTML === "ARCHITECTURE" ? p[2].innerHTML = "STRUCTURE" : p[2].innerHTML = "ARCHITECTURE";
+        }, 5000);
+
+      var images = ["../erased-studio/images/erased-1.jpg", "../erased-studio/images/erased-2.jpg"]
+      var imageHead = document.getElementById("background");
+      var i = 1;
+      console.log(images.length)
+      setInterval(function() {
+        imageHead.style.backgroundImage = "url(" + images[i] + ")";
+        i = i + 1;
+        if (i == images.length) {
+          i =  0;
+        }
+      }, 12000);
+    </script>
   </body>
 </html>
 

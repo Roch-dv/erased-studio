@@ -1,4 +1,61 @@
 @import url('fonts/stylesheet.css');
+@import url('reset.css');
 
+html {
+/*  background: url('../images/erased-1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
 
+body {
+  font-family: 'abc_favorit_monoregular', Fallback, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+}
 
+p {
+  font-size: 12px;
+}
+
+#background {
+  background: url('../images/erased-1.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  margin: 5vw;
+  align-items: flex-end;
+  height: 75vh;
+}
+
+.contact a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.name {
+  font-size: 60px;
+}
+
+.container-right {
+  display: flex;
+}
+
+.container, .container-right, .infos, .space, .contact, .name{
+  flex: 1;
+}
