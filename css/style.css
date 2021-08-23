@@ -58,3 +58,63 @@ p {
 .container, .container-right, .infos, .space, .contact, .name{
   flex: 1;
 }
+
+@media (max-width: 1120px) {
+  /* For a screen < 960px, this CSS will be read */
+  .space {
+    flex: 0.9;
+  }
+}
+
+@media (max-width: 1068px) {
+  /* For a screen < 960px, this CSS will be read */
+  .space {
+    flex: 0.8;
+  }
+}
+
+@media (max-width: 1033px) {
+  /* For a screen < 960px, this CSS will be read */
+  .space {
+    flex: 0.6;
+  }
+}
+
+@media (min-width: 890px) and (max-width: 1032px) {
+  /* For a screen < 960px, this CSS will be read */
+  .space {
+    flex: 0.4;
+  }
+}
+
+@media (min-width: 851px) and (max-width: 890px) {
+  /* For a screen < 960px, this CSS will be read */
+  .space {
+    flex: 0.4;
+  }
+}
+
+@media (max-width: 851px) {
+  /* For a screen < 960px, this CSS will be read */
+
+  .name {
+    position: absolute;
+    top: 70vh;
+  }
+
+  .infos {
+    position: absolute;
+    top: 5vw;
+  }
+
+  .contact {
+    position: absolute;
+    bottom: 5vw;
+  }
+}
+
+@media (max-width: 851px) {
+  .name {
+    font-size: 50px;
+  }
+}
