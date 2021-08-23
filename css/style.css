@@ -90,7 +90,7 @@ p {
 @media (min-width: 851px) and (max-width: 890px) {
   /* For a screen < 960px, this CSS will be read */
   .space {
-    flex: 0.4;
+    flex: 0.3;
   }
 }
 
