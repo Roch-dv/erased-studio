@@ -99,7 +99,7 @@ p {
 
   .name {
     position: absolute;
-    top: 70vh;
+    bottom: 15vh;
   }
 
   .infos {
