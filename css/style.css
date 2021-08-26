@@ -17,7 +17,15 @@ body {
 }
 
 p {
-  font-size: 12px;
+  font-size: 1.4vw;
+}
+
+h1 {
+  font-family: 'abc_favorit_monobold', Fallback, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0px;
+  word-spacing: -4.2vw;
 }
 
 #background {
@@ -31,11 +39,56 @@ p {
 }
 
 .container {
-  display: flex;
-  margin: 5vw;
-  align-items: flex-end;
-  height: 75vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 94.75vw;
+  height: 94.75vh;
+  margin: 2.62vw;
+  grid-template-areas:
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+      "n  n  .  inf  . co"
+      ".  .  .  .  .  .";
 }
+
+
+
+.name-container {
+  grid-area: n;
+  position: relative;
+}
+
+.infos-container {
+  grid-area: inf;
+  position: relative;
+}
+
+.contact-container {
+  grid-area: co;
+  position: relative;
+}
+
+.name {
+  font-size: 6.71vw;
+  position: absolute;
+  bottom: -9px;
+}
+
+.infos {
+  position: absolute;
+  bottom: 0px;
+}
+
+.contact {
+  position: absolute;
+  bottom: 0px;
+  left: -7.88vw;
+}
+
+
 
 .contact a {
   text-decoration: none;
@@ -47,74 +100,91 @@ p {
   color: white;
 }
 
-.name {
-  font-size: 60px;
-}
 
-.container-right {
-  display: flex;
-}
 
-.container, .container-right, .infos, .space, .contact, .name{
-  flex: 1;
-}
-
-@media (max-width: 1120px) {
+@media (max-width: 770px) {
   /* For a screen < 960px, this CSS will be read */
-  .space {
-    flex: 0.9;
+  .container {
+    grid-template-areas:
+        "inf inf inf .  .  ."
+        ".  .  .  .  .  ."
+        ".  .  .  .  .  ."
+        ".  .  .  .  .  ."
+        "n  n  n  .  .  ."
+        "co co co .  .  .";
   }
-}
 
-@media (max-width: 1068px) {
-  /* For a screen < 960px, this CSS will be read */
-  .space {
-    flex: 0.8;
-  }
-}
-
-@media (max-width: 1033px) {
-  /* For a screen < 960px, this CSS will be read */
-  .space {
-    flex: 0.6;
-  }
-}
-
-@media (min-width: 890px) and (max-width: 1032px) {
-  /* For a screen < 960px, this CSS will be read */
-  .space {
-    flex: 0.4;
-  }
-}
-
-@media (min-width: 851px) and (max-width: 890px) {
-  /* For a screen < 960px, this CSS will be read */
-  .space {
-    flex: 0.3;
-  }
-}
-
-@media (max-width: 851px) {
-  /* For a screen < 960px, this CSS will be read */
-
-  .name {
-    position: absolute;
-    bottom: 15vh;
+  .name h1 {
+    word-spacing: -6.5vw;
+    margin-bottom: -0.5vw;
+    font-size: 9.91vw;
   }
 
   .infos {
-    position: absolute;
-    top: 5vw;
+    top: 0px;
+  }
+
+  p {
+    font-size: 3.1vw;
   }
 
   .contact {
-    position: absolute;
-    bottom: 5vw;
+    left: 0.32vw;
   }
 }
 
-@media (max-width: 851px) {
-  .name {
-    font-size: 50px;
+/*@media (max-width: 775px){
+  .name h1 {
+    word-spacing: -48px;
+    margin-bottom: -6px;
+    font-size: 10.01vw;
   }
 }
+
+@media (max-width: 545px){
+  .name h1 {
+    word-spacing: -34px;
+    margin-bottom: -6px;
+    font-size: 10.01vw;
+  }
+}
+
+@media (max-width: 418px){
+  .name h1 {
+    word-spacing: -23.6px;
+    margin-bottom: 0px;
+    font-size: 9.71vw;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .name h1 {
+    word-spacing: -24.1px;
+    margin-bottom: 0px;
+    font-size: 10.11vw;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .name h1 {
+    word-spacing: -26.1px;
+    font-size: 10.61vw;
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 325px) {
+  .name h1 {
+    word-spacing: -19.9px;
+    font-size: 9.91vw;
+  }
+}
+
+@media (max-width: 285px) {
+  .name h1 {
+    word-spacing: -19.4px;
+    font-size: 10.41vw;
+  }
+}*/

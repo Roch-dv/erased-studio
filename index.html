@@ -4,7 +4,7 @@
 
   <head>
     <title>Erased Studio</title>
-    <!-- <link rel="icon" href="images/logo.png" type="image/png"> -->
+    <link rel="icon" href="images/icon.jpg" type="image/png">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,42 +13,49 @@
   </head>
 
   <body>
-    <div class="background">
-      <div class="container">
+    <div class="container">
+      <div class="name-container">
         <div class="name">
-          <h1>ER:AS:ED</h1>
-          <h1>ST.UD.IO</h1>
+          <h1>ER : AS : ED</h1>
+          <h1>ST . UD . IO</h1>
         </div>
-        <div class="container-right">
-          <div class="infos">
-            <p>SET DESIGN</p>
-            <p>CREATIVE DIRECTION</p>
-            <p>ARCHITECTURE</p>
-          </div>
-          <div class="space">
-
-          </div>
-          <div class="contact">
-            <p><a href="tel:+32493646839" target="_blank">+32.493.64.68.39</a></p>
-            <p><a href="mailto:infos@erased-studio.com" target="_blank">INFOS@ERASED-STUDIO.COM</a></p>
-            <p><a href="https://www.instagram.com/erasedstudio/" target="_blank">@ERASEDSTUDIO</a></p>
-          </div>
+      </div>
+      <div class="infos-container">
+        <div class="infos">
+          <p>SET DESIGN</p>
+          <p>CREATIVE DIRECTION</p>
+          <p>ARCHITECTURE</p>
+        </div>
+      </div>
+      <div class="contact-container">
+        <div class="contact">
+          <p><a href="tel:+32493646839" target="_blank">+32.493.64.68.39</a></p>
+          <p><a href="mailto:infos@erased-studio.com" target="_blank">INFOS@ERASED-STUDIO.COM</a></p>
+          <p><a href="https://www.instagram.com/erasedstudio/" target="_blank">@ERASEDSTUDIO</a></p>
         </div>
       </div>
     </div>
     <script>
+
+      // setInterval(function(){
+      //   let h1 = document.querySelectorAll('.name h1');
+      //   h1[0].innerHTML === "ER : AS : ED" ? h1[0].innerHTML = "13 : 06 : 26" : h1[0].innerHTML = "ER : AS : ED";
+      //   h1[1].innerHTML === "ST . UD . IO" ? h1[1].innerHTML = "27 . 01 . 21" : h1[1].innerHTML = "ST . UD . IO";
+      //   }, 3000);
+
       setInterval(function(){
+        let dt = new Date();
         let h1 = document.querySelectorAll('.name h1');
-        h1[0].innerHTML === "ER:AS:ED" ? h1[0].innerHTML = "13:06:26" : h1[0].innerHTML = "ER:AS:ED";
-        h1[1].innerHTML === "ST.UD.IO" ? h1[1].innerHTML = "27.01.21" : h1[1].innerHTML = "ST.UD.IO";
-        }, 3500);
+        h1[0].innerHTML === "ER : AS : ED" ? h1[0].innerHTML = (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2)) +":"+ (("0"+dt.getSeconds()).slice(-2)) : h1[0].innerHTML = "ER : AS : ED";
+        h1[1].innerHTML === "ST . UD . IO" ? h1[1].innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (("0"+dt.getFullYear()).slice(-2)) : h1[1].innerHTML = "ST . UD . IO";
+        }, 3000);
 
       setInterval(function(){
         let p = document.querySelectorAll('.infos p');
         p[0].innerHTML === "SET DESIGN" ? p[0].innerHTML = "EPHEMERAL" : p[0].innerHTML = "SET DESIGN";
         p[1].innerHTML === "CREATIVE DIRECTION" ? p[1].innerHTML = "TIMELESS" : p[1].innerHTML = "CREATIVE DIRECTION";
         p[2].innerHTML === "ARCHITECTURE" ? p[2].innerHTML = "STRUCTURE" : p[2].innerHTML = "ARCHITECTURE";
-        }, 3500);
+        }, 3000);
 
       var images = ["../erased-studio/images/erased-1.jpg", "../erased-studio/images/erased-2.jpg"]
       var imageHead = document.getElementById("background");
@@ -62,7 +69,11 @@
         }
       }
       changeIm();
-      setInterval(changeIm, 12000);
+      setInterval(changeIm, 3000);
+
+
+      // document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2)) +":"+ (("0"+dt.getSeconds()).slice(-2));
+
     </script>
   </body>
 </html>
