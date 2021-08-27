@@ -16,8 +16,8 @@
     <div class="container">
       <div class="name-container">
         <div class="name">
-          <h1>ER : AS : ED</h1>
-          <h1>ST . UD . IO</h1>
+          <h1><span>E</span><span>R</span> : <span>A</span><span>S</span> : <span>E</span><span>D</span></h1>
+          <h1><span>S</span><span>T</span> . <span>U</span><span>D</span> . <span>I</span><span>O</span></h1>
         </div>
       </div>
       <div class="infos-container">
@@ -35,6 +35,8 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="./js/NameToHours.js"></script>
+    <script type="text/javascript" src="./js/HoursToName.js"></script>
     <script>
 
       // setInterval(function(){
@@ -43,23 +45,25 @@
       //   h1[1].innerHTML === "ST . UD . IO" ? h1[1].innerHTML = "27 . 01 . 21" : h1[1].innerHTML = "ST . UD . IO";
       //   }, 3000);
 
-      setInterval(function(){
-        let dt = new Date();
-        let h1 = document.querySelectorAll('.name h1');
-        h1[0].innerHTML === "ER : AS : ED" ? h1[0].innerHTML = (("0"+dt.getHours()).slice(-2)) +" : "+ (("0"+dt.getMinutes()).slice(-2)) +" : "+ (("0"+dt.getSeconds()).slice(-2)) : h1[0].innerHTML = "ER : AS : ED";
-        h1[1].innerHTML === "ST . UD . IO" ? h1[1].innerHTML = (("0"+dt.getDate()).slice(-2)) +" . "+ (("0"+(dt.getMonth()+1)).slice(-2)) +" . "+ (("0"+dt.getFullYear()).slice(-2)) : h1[1].innerHTML = "ST . UD . IO";
-        }, 3000);
+      // setInterval(function(){
+      //   let dt = new Date();
+      //   let h1 = document.querySelectorAll('.name h1');
+      //   h1[0].innerHTML === "ER : AS : ED" ? h1[0].innerHTML = (("0"+dt.getHours()).slice(-2)) +" : "+ (("0"+dt.getMinutes()).slice(-2)) +" : "+ (("0"+dt.getSeconds()).slice(-2)) : h1[0].innerHTML = "ER : AS : ED";
+      //   h1[1].innerHTML === "ST . UD . IO" ? h1[1].innerHTML = (("0"+dt.getDate()).slice(-2)) +" . "+ (("0"+(dt.getMonth()+1)).slice(-2)) +" . "+ (("0"+dt.getFullYear()).slice(-2)) : h1[1].innerHTML = "ST . UD . IO";
+      //   }, 3000);
 
-      setInterval(function(){
-        let p = document.querySelectorAll('.infos p');
-        p[0].innerHTML === "SET DESIGN" ? p[0].innerHTML = "EPHEMERAL" : p[0].innerHTML = "SET DESIGN";
-        p[1].innerHTML === "CREATIVE DIRECTION" ? p[1].innerHTML = "TIMELESS" : p[1].innerHTML = "CREATIVE DIRECTION";
-        p[2].innerHTML === "ARCHITECTURE" ? p[2].innerHTML = "STRUCTURE" : p[2].innerHTML = "ARCHITECTURE";
-        }, 3000);
+      // setInterval(function(){
+      //   let p = document.querySelectorAll('.infos p');
+      //   p[0].innerHTML === "SET DESIGN" ? p[0].innerHTML = "EPHEMERAL" : p[0].innerHTML = "SET DESIGN";
+      //   p[1].innerHTML === "CREATIVE DIRECTION" ? p[1].innerHTML = "TIMELESS" : p[1].innerHTML = "CREATIVE DIRECTION";
+      //   p[2].innerHTML === "ARCHITECTURE" ? p[2].innerHTML = "STRUCTURE" : p[2].innerHTML = "ARCHITECTURE";
+      //   }, 3000);
 
-      var images = ["../erased-studio/images/erased-1.jpg", "../erased-studio/images/erased-2.jpg"]
-      var imageHead = document.getElementById("background");
-      var i = 1;
+      ///////////////////////////////////////////////////////////////////////////////////
+
+      const images = ["../erased-studio/images/erased-1.jpg", "../erased-studio/images/erased-2.jpg", "../erased-studio/images/erased-3.jpg", "../erased-studio/images/erased-4.jpg", "../erased-studio/images/erased-5.jpg"]
+      const imageHead = document.getElementById("background");
+      let i = 1;
 
       function changeIm() {
         imageHead.style.backgroundImage = "url(" + images[i] + ")";
@@ -68,8 +72,84 @@
           i =  0;
         }
       }
-      changeIm();
-      setInterval(changeIm, 3000);
+
+
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+
+      async function NameToHours(){
+        GetHourFlippin(0);
+        await sleep(125);
+        GetHourFlippin(1);
+        await sleep(125);
+        GetMinuteFlippin(0);
+        await sleep(125);
+        GetMinuteFlippin(1);
+        await sleep(125);
+        GetSecondeFlippin(0);
+        await sleep(125);
+        GetSecondeFlippin(1);
+        await sleep(125);
+        GetDateFlippin(0);
+        await sleep(125);
+        GetDateFlippin(1);
+        await sleep(125);
+        GetMonthFlippin(0);
+        await sleep(125);
+        GetMonthFlippin(1);
+        await sleep(125);
+        GetYearFlippin(0);
+        await sleep(125);
+        GetYearFlippin(1);
+      }
+
+      async function HoursToName(){
+        GetLetterFlippin(0);
+        await sleep(125);
+        GetLetterFlippin(1);
+        await sleep(125);
+        GetLetterFlippin(2);
+        await sleep(125);
+        GetLetterFlippin(3);
+        await sleep(125);
+        GetLetterFlippin(4);
+        await sleep(125);
+        GetLetterFlippin(5);
+        await sleep(125);
+        GetLetterFlippin(6);
+        await sleep(125);
+        GetLetterFlippin(7);
+        await sleep(125);
+        GetLetterFlippin(8);
+        await sleep(125);
+        GetLetterFlippin(9);
+        await sleep(125);
+        GetLetterFlippin(10);
+        await sleep(125);
+        GetLetterFlippin(11);
+      }
+
+      async function flipLetters(){
+        await sleep(3000);
+        changeIm();
+        NameToHours();
+        await sleep(6000);
+        changeIm();
+        HoursToName();
+      }
+
+      flipLetters();
+
+
+
+      // var flipLetters = setInterval(async function(){
+      //   NameToHours();
+      //   await sleep(6000);
+      //   HoursToName();
+
+      // }, 6000)
 
 
       // document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2)) +":"+ (("0"+dt.getSeconds()).slice(-2));

@@ -29,6 +29,7 @@ h1 {
 }
 
 #background {
+  background: url('../images/erased-1.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -103,6 +104,7 @@ h1 {
 @media (max-width: 770px) {
   /* For a screen < 960px, this CSS will be read */
   .container {
+    height: 95.65vh;
     grid-template-areas:
         "inf inf inf .  .  ."
         ".  .  .  .  .  ."
@@ -115,7 +117,7 @@ h1 {
   .name h1 {
     word-spacing: -6.5vw;
     margin-bottom: -0.5vw;
-    font-size: 9.91vw;
+    font-size: 9.71vw;
   }
 
   .infos {
@@ -128,5 +130,11 @@ h1 {
 
   .contact {
     left: 0.32vw;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    height: 97.15vh;
   }
 }
