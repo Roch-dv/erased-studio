@@ -1,14 +1,6 @@
 @import url('fonts/stylesheet.css');
 @import url('reset.css');
 
-html {
-/*  background: url('../images/erased-1.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;*/
-}
-
 body {
   font-family: 'abc_favorit_monoregular', Fallback, sans-serif;
   font-weight: normal;
@@ -34,7 +26,7 @@ span {
   white-space:nowrap;
 }
 
-#background {
+/*#background {
   background: url('../images/erased-1.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -43,6 +35,24 @@ span {
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
+}*/
+
+.background-images {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+.showing-image {
+  display: inline;
+}
+
+img {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: none;
 }
 
 .container {
@@ -51,7 +61,7 @@ span {
   grid-template-rows: repeat(6, 1fr);
   width: 94.75vw;
   height: 94.75vh;
-  margin: 2.62vw;
+  padding: 2.62vw;
   grid-template-areas:
       ".  .  .  .  .  ."
       ".  .  .  .  .  ."

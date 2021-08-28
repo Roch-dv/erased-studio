@@ -13,25 +13,33 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="name-container">
-        <div class="name">
-          <h1><span>E</span><span>R</span> : <span>A</span><span>S</span> : <span>E</span><span>D</span></h1>
-          <h1><span>S</span><span>T</span> . <span>U</span><span>D</span> . <span>I</span><span>O</span></h1>
+    <div class="background-images">
+      <img class="showing-image" src="images/erased-1.jpg" alt="ERASED">
+      <img class="" src="images/erased-2.jpg" alt="ERASED">
+      <img class="" src="images/erased-3.jpg" alt="ERASED">
+      <img class="" src="images/erased-4.jpg" alt="ERASED">
+      <img class="" src="images/erased-5.jpg" alt="ERASED">
+
+      <div class="container">
+        <div class="name-container">
+          <div class="name">
+            <h1><span>E</span><span>R</span> : <span>A</span><span>S</span> : <span>E</span><span>D</span></h1>
+            <h1><span>S</span><span>T</span> . <span>U</span><span>D</span> . <span>I</span><span>O</span></h1>
+          </div>
         </div>
-      </div>
-      <div class="infos-container">
-        <div class="infos">
-          <p>SET DESIGN</p>
-          <p>CREATIVE DIRECTION</p>
-          <p>ARCHITECTURE</p>
+        <div class="infos-container">
+          <div class="infos">
+            <p>SET DESIGN</p>
+            <p>CREATIVE DIRECTION</p>
+            <p>ARCHITECTURE</p>
+          </div>
         </div>
-      </div>
-      <div class="contact-container">
-        <div class="contact">
-          <p><a href="tel:+32493646839" target="_blank">+32.493.64.68.39</a></p>
-          <p><a href="mailto:infos@erased-studio.com" target="_blank">INFOS@ERASED-STUDIO.COM</a></p>
-          <p><a href="https://www.instagram.com/erasedstudio/" target="_blank">@ERASEDSTUDIO</a></p>
+        <div class="contact-container">
+          <div class="contact">
+            <p><a href="tel:+32493646839" target="_blank">+32.493.64.68.39</a></p>
+            <p><a href="mailto:infos@erased-studio.com" target="_blank">INFOS@ERASED-STUDIO.COM</a></p>
+            <p><a href="https://www.instagram.com/erasedstudio/" target="_blank">@ERASEDSTUDIO</a></p>
+          </div>
         </div>
       </div>
     </div>
@@ -61,15 +69,17 @@
 
       ///////////////////////////////////////////////////////////////////////////////////
 
-      const images = ["../erased-studio/images/erased-1.jpg", "../erased-studio/images/erased-2.jpg", "../erased-studio/images/erased-3.jpg", "../erased-studio/images/erased-4.jpg", "../erased-studio/images/erased-5.jpg"]
-      const imageHead = document.getElementById("background");
-      let i = 1;
+      const img = document.querySelectorAll('img');
 
-      function changeIm() {
-        imageHead.style.backgroundImage = "url(" + images[i] + ")";
-        i = i + 1;
-        if (i == images.length) {
-          i =  0;
+      function changeIm(){
+        old = document.querySelectorAll('.showing-image')
+
+        if (old[0].nextElementSibling.localName === "img"){
+          old[0].nextElementSibling.classList.add('showing-image');
+          old[0].classList.remove('showing-image');
+        } else {
+          img[0].classList.add('showing-image');
+          old[0].classList.remove('showing-image');
         }
       }
 
@@ -105,18 +115,6 @@
       }
 
       flipLetters();
-
-
-
-      // var flipLetters = setInterval(async function(){
-      //   NameToHours();
-      //   await sleep(6000);
-      //   HoursToName();
-
-      // }, 6000)
-
-
-      // document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2)) +":"+ (("0"+dt.getSeconds()).slice(-2));
 
     </script>
   </body>
