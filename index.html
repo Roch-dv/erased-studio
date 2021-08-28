@@ -94,24 +94,17 @@
 
       async function flipLetters(){
         await sleep(3000);
-        changeIm();
-        NameToHours();
-        await sleep(6000);
-        changeIm();
-        HoursToName();
-        await sleep(6000);
-        changeIm();
-        NameToHours();
-        await sleep(6000);
-        changeIm();
-        HoursToName();
-        await sleep(6000);
-        changeIm();
-        NameToHours();
-        await sleep(6000);
-        changeIm();
-        HoursToName();
-        await sleep(6000);
+        let x = 0;
+
+        while (x < 50){
+          changeIm();
+          NameToHours();
+          await sleep(6000);
+          changeIm();
+          HoursToName();
+          await sleep(6000);
+          x += 1;
+        }
       }
 
       flipLetters();
