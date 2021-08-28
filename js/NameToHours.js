@@ -9,10 +9,6 @@ function RandomLetter (){
   return randomLet;
 }
 
-function GetAllSpan(){
-  return document.querySelectorAll('.name span');
-}
-
 
 // This function will flip the two first letter into actual hour time -- Takes 1,5sec
 // column is 0 or 1
@@ -200,3 +196,51 @@ function GetYearFlippin(column){
     }, 100)
   }
 }
+
+
+// This function run all the others function to make all the letters flippin in 125ms delay
+
+async function NameToHours(){
+
+  GetHourFlippin(0);
+  await sleep(125);
+  GetHourFlippin(1);
+  await sleep(125);
+
+  GetMinuteFlippin(0);
+  await sleep(125);
+  GetMinuteFlippin(1);
+  await sleep(125);
+
+  GetHourFlippin(0);
+  await sleep(125);
+  GetHourFlippin(1);
+  await sleep(125);
+
+  GetMinuteFlippin(0);
+  await sleep(125);
+  GetMinuteFlippin(1);
+  await sleep(125);
+
+  GetSecondeFlippin(0);
+  await sleep(125);
+  GetSecondeFlippin(1);
+  await sleep(125);
+
+  GetDateFlippin(0);
+  await sleep(125);
+  GetDateFlippin(1);
+  await sleep(125);
+
+  GetMonthFlippin(0);
+  await sleep(125);
+  GetMonthFlippin(1);
+  await sleep(125);
+
+  GetYearFlippin(0);
+  await sleep(125);
+  GetYearFlippin(1);
+  await sleep(125);
+}
+
+

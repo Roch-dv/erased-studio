@@ -120,9 +120,9 @@ span {
   }
 
   h1 {
-    word-spacing: -7vw;
+    word-spacing: -7.5vw;
     margin-bottom: -0.5vw;
-    font-size: 9.71vw;
+    font-size: 10.71vw;
   }
 
   p {
@@ -141,5 +141,39 @@ span {
 @media (max-width: 520px) {
   .container {
     height: 97.15vh;
+  }
+}
+
+@media (orientation: landscape) {
+  .container {
+    height: 94.75vh;
+    grid-template-areas:
+        ".  .  .  .  .  ."
+        ".  .  .  .  .  ."
+        ".  .  .  .  .  ."
+        ".  .  .  .  .  ."
+        "n  n  .  inf  . co"
+        ".  .  .  .  .  .";
+  }
+
+  h1 {
+    word-spacing: -4.6vw;
+    font-size: 6.71vw;
+  }
+
+  p {
+    font-size: 1.4vw;
+  }
+
+  .infos {
+    position: absolute;
+    bottom: 0px;
+    top: unset;
+  }
+
+  .contact {
+    position: absolute;
+    bottom: 0px;
+    left: -7.88vw;
   }
 }

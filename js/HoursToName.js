@@ -8,9 +8,6 @@ function RandomNumber(){
   return num.toString();
 }
 
-function GetAllSpan(){
-  return document.querySelectorAll('.name span');
-}
 
 function RightLetter(index){
   span = GetAllSpan();
@@ -72,5 +69,16 @@ function GetLetterFlippin(index){
 }
 
 
+// This function make GetLetterFlippin lopping changing the index until a = 11;
+// Every Span will change
+
+async function HoursToName(){
+ let a = 0;
+ while (a < 12) {
+    GetLetterFlippin(a);
+    await sleep(125);
+    a += 1;
+  }
+}
 
 
