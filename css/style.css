@@ -30,6 +30,7 @@ span {
   position: fixed;
   height: 100vh;
   width: 100vw;
+  min-height: -webkit-fill-available;
 }
 
 .showing-image {
@@ -39,7 +40,7 @@ span {
 img {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: -webkit-fill-available;
   object-fit: cover;
   display: none;
 }

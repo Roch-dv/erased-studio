@@ -14,11 +14,19 @@
 
   <body>
     <div class="background-images">
-      <img class="showing-image" src="images/erased-1.jpg" alt="ERASED">
-      <img class="" src="images/erased-2.jpg" alt="ERASED">
-      <img class="" src="images/erased-3.jpg" alt="ERASED">
-      <img class="" src="images/erased-4.jpg" alt="ERASED">
-      <img class="" src="images/erased-5.jpg" alt="ERASED">
+      <img class="showing-image" src="images/1.jpg" alt="ERASED">
+      <img class="" src="images/2.jpg" alt="ERASED">
+      <img class="" src="images/3.jpg" alt="ERASED">
+      <img class="" src="images/4.jpg" alt="ERASED">
+      <img class="" src="images/5.jpg" alt="ERASED">
+      <img class="" src="images/6.jpg" alt="ERASED">
+      <img class="" src="images/7.jpg" alt="ERASED">
+      <img class="" src="images/8.jpg" alt="ERASED">
+      <img class="" src="images/9.jpg" alt="ERASED">
+      <img class="" src="images/10.jpg" alt="ERASED">
+      <img class="" src="images/11.jpg" alt="ERASED">
+      <img class="" src="images/12.jpg" alt="ERASED">
+      <img class="" src="images/13.jpg" alt="ERASED">
 
       <div class="container">
         <div class="name-container">
@@ -45,6 +53,7 @@
     </div>
     <script type="text/javascript" src="./js/NameToHours.js"></script>
     <script type="text/javascript" src="./js/HoursToName.js"></script>
+    <script type="text/javascript" src="./js/UpdateTime.js"></script>
     <script>
 
       // setInterval(function(){
@@ -93,16 +102,19 @@
 
 
       async function flipLetters(){
-        await sleep(3000);
+        await sleep(5000);
         let x = 0;
 
         while (x < 50){
           changeIm();
           NameToHours();
-          await sleep(6000);
+          // This line should have a function that update every second the time during 5sec then stop
+          await sleep(2000);
+          UpdateTime();
+          await sleep(5000);
           changeIm();
           HoursToName();
-          await sleep(6000);
+          await sleep(7000);
           x += 1;
         }
       }

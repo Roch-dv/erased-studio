@@ -51,13 +51,15 @@ function RightLetter(index){
   }
 }
 
-// This function will flip the two first letter into actual hour time -- Takes 1,5sec
+// This function will flip the two first letter into actual hour time -- Takes 1sec
 // x === index of letter
+// numberOfFlip & intervalTime are defined in NameToHours.js
+
 function GetLetterFlippin(index){
   let i = 0
 
   var flip = setInterval(function(){
-    if (i < 15){
+    if (i < numberOfFlip){
       span = GetAllSpan();
       span[index].innerHTML = RandomNumber();
       i++
@@ -65,18 +67,19 @@ function GetLetterFlippin(index){
       clearInterval(flip);
       RightLetter(index);
     }
-  }, 100)
+  }, intervalTime)
 }
 
 
 // This function make GetLetterFlippin lopping changing the index until a = 11;
 // Every Span will change
+// run in 2 sec
 
 async function HoursToName(){
  let a = 0;
  while (a < 12) {
     GetLetterFlippin(a);
-    await sleep(125);
+    await sleep(83.3333);
     a += 1;
   }
 }
