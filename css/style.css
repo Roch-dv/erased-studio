@@ -1,6 +1,10 @@
 @import url('fonts/stylesheet.css');
 @import url('reset.css');
 
+:root {
+  --vh: 100vh;
+}
+
 body {
   font-family: 'abc_favorit_monoregular', Fallback, sans-serif;
   font-weight: normal;
@@ -30,7 +34,8 @@ span {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  min-height: -webkit-fill-available;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .showing-image {
