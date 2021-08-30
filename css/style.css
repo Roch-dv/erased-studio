@@ -57,6 +57,7 @@ img {
   grid-template-rows: repeat(6, 1fr);
   width: 94.75vw;
   height: 94.75vh;
+  height: calc(var(--vh, 1vh) * 94.75);
   padding: 2.62vw;
   grid-template-areas:
       ".  .  .  .  .  ."
@@ -115,6 +116,7 @@ img {
   /* For a screen < 960px, this CSS will be read */
   .container {
     height: 95.65vh;
+    height: calc(var(--vh, 1vh) * 95.65);
     grid-template-areas:
         "inf inf inf .  .  ."
         ".  .  .  .  .  ."
@@ -146,12 +148,14 @@ img {
 @media (max-width: 520px) {
   .container {
     height: 97.15vh;
+    height: calc(var(--vh, 1vh) * 97.15);
   }
 }
 
 @media (orientation: landscape) {
   .container {
     height: 94.75vh;
+    height: calc(var(--vh, 1vh) * 94.75);
     grid-template-areas:
         ".  .  .  .  .  ."
         ".  .  .  .  .  ."
