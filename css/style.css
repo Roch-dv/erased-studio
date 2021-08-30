@@ -104,7 +104,6 @@ img {
 }
 
 
-
 @media (max-width: 770px) {
   /* For a screen < 960px, this CSS will be read */
   .container {
@@ -174,5 +173,11 @@ img {
     position: absolute;
     bottom: 0px;
     left: -7.88vw;
+  }
+}
+
+@media (min-width: 1130px) {
+  p {
+    font-size: 16.5px;
   }
 }
