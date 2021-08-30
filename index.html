@@ -37,9 +37,9 @@
         </div>
         <div class="infos-container">
           <div class="infos">
-            <p>SET DESIGN</p>
-            <p>CREATIVE DIRECTION</p>
-            <p>ARCHITECTURE</p>
+            <p><span>S</span><span>E</span><span>T</span><span> </span><span>D</span><span>E</span><span>S</span><span>I</span><span>G</span><span>N</span></p>
+            <p><span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>I</span><span>V</span><span>E</span><span> </span><span>D</span><span>I</span><span>R</span><span>E</span><span>C</span><span>T</span><span>I</span><span>O</span><span>N</span></p>
+            <p><span>A</span><span>R</span><span>C</span><span>H</span><span>I</span><span>T</span><span>E</span><span>C</span><span>T</span><span>U</span><span>R</span><span>E</span></p>
           </div>
         </div>
         <div class="contact-container">
@@ -54,6 +54,7 @@
     <script type="text/javascript" src="./js/NameToHours.js"></script>
     <script type="text/javascript" src="./js/HoursToName.js"></script>
     <script type="text/javascript" src="./js/UpdateTime.js"></script>
+    <script type="text/javascript" src="./js/ChangeInfos.js"></script>
     <script>
 
       // setInterval(function(){
@@ -108,12 +109,14 @@
         while (x < 50){
           changeIm();
           NameToHours();
+          ChangeInfos();
           // This line should have a function that update every second the time during 5sec then stop
           await sleep(1900);
           UpdateTime();
           await sleep(5000);
           changeIm();
           HoursToName();
+          ChangeInfos();
           await sleep(7000);
           x += 1;
         }
