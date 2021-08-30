@@ -18,14 +18,14 @@
       <img class="" src="images/2.jpg" alt="ERASED">
       <img class="" src="images/3.jpg" alt="ERASED">
       <img class="" src="images/4.jpg" alt="ERASED">
-      <img class="" src="images/5.jpg" alt="ERASED">
+      <img id="pictureFive" class="" src="images/5.jpg" alt="ERASED">
       <img class="" src="images/6.jpg" alt="ERASED">
       <img class="" src="images/7.jpg" alt="ERASED">
-      <img class="" src="images/8.jpg" alt="ERASED">
+      <img id="pictureEight" class="" src="images/8.jpg" alt="ERASED">
       <img class="" src="images/9.jpg" alt="ERASED">
       <img class="" src="images/10.jpg" alt="ERASED">
       <img class="" src="images/11.jpg" alt="ERASED">
-      <img class="" src="images/12.jpg" alt="ERASED">
+      <img id="pictureTwelve" class="" src="images/12.jpg" alt="ERASED">
       <img class="" src="images/13.jpg" alt="ERASED">
 
       <div class="container">
@@ -109,7 +109,7 @@
           changeIm();
           NameToHours();
           // This line should have a function that update every second the time during 5sec then stop
-          await sleep(2000);
+          await sleep(1900);
           UpdateTime();
           await sleep(5000);
           changeIm();
@@ -122,7 +122,7 @@
       flipLetters();
 
 
-      // Resize the vh
+      // Resize the vh for mobile
       const appHeight = () => {
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);

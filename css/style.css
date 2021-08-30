@@ -151,6 +151,20 @@ img {
     height: calc(var(--vh, 1vh) * 97.15);
     min-height: calc(var(--vh, 1vh) * 97.15);
   }
+
+  #pictureFive {
+    width: 250vw;
+  }
+
+  #pictureEight {
+    width: 167vw;
+  }
+
+  #pictureTwelve {
+    width: 250vw;
+  }
+
+
 }
 
 @media (orientation: landscape) {
