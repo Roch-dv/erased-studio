@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'abc_favorit_monoregular';
-    src: url('https://roch-dv.github.io/erased-studio/css/fonts/abcfavoritmono-regular-webfont.woff') format('woff'),
-         url('https://roch-dv.github.io/erased-studio/css/fonts/abcfavoritmono-regular-webfont.woff2') format('woff2');
+    src: url('abcfavoritmono-regular-webfont.woff') format('woff'),
+         url('abcfavoritmono-regular-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 
@@ -12,8 +12,8 @@
 
 @font-face {
     font-family: 'abc_favorit_monobold';
-    src: url('https://roch-dv.github.io/erased-studio/css/fonts/abcfavoritmono-bold-webfont.woff') format('woff'),
-         url('https://roch-dv.github.io/erased-studio/css/fonts/abcfavoritmono-bold-webfont.woff2') format('woff2');
+    src: url('abcfavoritmono-bold-webfont.woff') format('woff'),
+         url('abcfavoritmono-bold-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 
