@@ -89,6 +89,10 @@ img {
   bottom: -9px;
 }
 
+.erasedstudio {
+  display: none;
+}
+
 .infos {
   position: absolute;
   bottom: 0px;
@@ -157,13 +161,16 @@ img {
   }
 
   #pictureEight {
-    width: 167vw;
+    width: 179vw;
   }
 
   #pictureTwelve {
     width: 250vw;
   }
 
+  #pictureFourteen {
+    width: 167vw;
+  }
 
 }
 

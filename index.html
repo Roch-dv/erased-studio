@@ -5,6 +5,7 @@
   <head>
     <title>Erased Studio</title>
     <link rel="icon" href="images/icon.jpg" type="image/png">
+    <meta name="description" content="Creative Direction">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +15,7 @@
 
   <body>
     <div class="background-images">
-      <img class="showing-image" src="images/1.jpg" alt="ERASED">
+      <img class="" src="images/1.jpg" alt="ERASED">
       <img class="" src="images/2.jpg" alt="ERASED">
       <img class="" src="images/3.jpg" alt="ERASED">
       <img class="" src="images/4.jpg" alt="ERASED">
@@ -27,12 +28,16 @@
       <img class="" src="images/11.jpg" alt="ERASED">
       <img id="pictureTwelve" class="" src="images/12.jpg" alt="ERASED">
       <img class="" src="images/13.jpg" alt="ERASED">
+      <img id="pictureFourteen" class="showing-image" src="images/14.jpg" alt="ERASED">
 
       <div class="container">
         <div class="name-container">
           <div class="name">
             <h1><span>E</span><span>R</span> : <span>A</span><span>S</span> : <span>E</span><span>D</span></h1>
             <h1><span>S</span><span>T</span> . <span>U</span><span>D</span> . <span>I</span><span>O</span></h1>
+          </div>
+          <div class="erasedstudio">
+            <h1>Erased Studio</h1>
           </div>
         </div>
         <div class="infos-container">
@@ -45,7 +50,7 @@
         <div class="contact-container">
           <div class="contact">
             <p><a href="tel:+32493646839" target="_blank">+32.493.64.68.39</a></p>
-            <p><a href="mailto:infos@erased-studio.com" target="_blank">INFOS@ERASED-STUDIO.COM</a></p>
+            <p><a href="mailto:infos@erased-studio.com" target="_blank">INFO@ERASED-STUDIO.COM</a></p>
             <p><a href="https://www.instagram.com/erasedstudio/" target="_blank">@ERASEDSTUDIO</a></p>
           </div>
         </div>
@@ -103,10 +108,14 @@
 
 
       async function flipLetters(){
-        await sleep(5000);
+        // await sleep(5000);
         let x = 0;
 
         while (x < 50){
+          changeIm();
+          HoursToName();
+          ChangeInfos();
+          await sleep(7000);
           changeIm();
           NameToHours();
           ChangeInfos();
@@ -114,10 +123,6 @@
           await sleep(1900);
           UpdateTime();
           await sleep(5000);
-          changeIm();
-          HoursToName();
-          ChangeInfos();
-          await sleep(7000);
           x += 1;
         }
       }
