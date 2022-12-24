@@ -18,20 +18,26 @@
 
   <body>
     <div class="background-images">
+      <img class="" src="images/0.jpg" alt="ERASED">
       <img class="" src="images/1.jpg" alt="ERASED">
       <img class="" src="images/2.jpg" alt="ERASED">
       <img class="" src="images/3.jpg" alt="ERASED">
-      <img class="" src="images/4.jpg" alt="ERASED">
-      <img id="pictureFive" class="" src="images/5.jpg" alt="ERASED">
-      <img class="" src="images/6.jpg" alt="ERASED">
+      <img class="" id="pictureFour" src="images/4.jpg" alt="ERASED">
+      <img class="" src="images/5.jpg" alt="ERASED">
+      <img class="" id="pictureSix" src="images/6.jpg" alt="ERASED">
       <img class="" src="images/7.jpg" alt="ERASED">
-      <img id="pictureEight" class="" src="images/8.jpg" alt="ERASED">
+      <img class="" src="images/8.jpg" alt="ERASED">
       <img class="" src="images/9.jpg" alt="ERASED">
       <img class="" src="images/10.jpg" alt="ERASED">
       <img class="" src="images/11.jpg" alt="ERASED">
-      <img id="pictureTwelve" class="" src="images/12.jpg" alt="ERASED">
+      <img class="" id="pictureTwelve" src="images/12.jpg" alt="ERASED">
       <img class="" src="images/13.jpg" alt="ERASED">
-      <img id="pictureFourteen" class="showing-image" src="images/14.jpg" alt="ERASED">
+      <img class="" src="images/14.jpg" alt="ERASED">
+      <img class="" src="images/15.jpg" alt="ERASED">
+      <img class="" src="images/16.jpg" alt="ERASED">
+      <img class="" src="images/17.jpg" id="pictureSeventeen" alt="ERASED">
+      <img class="" src="images/18.jpg" id="pictureEighteen" alt="ERASED">
+      <img class="showing-image" src="images/19.jpg" alt="ERASED">
 
       <div class="container">
         <div class="name-container">
@@ -53,7 +59,7 @@
         <div class="contact-container">
           <div class="contact">
             <p><a href="tel:+32493646839" target="_blank">+32.493.64.68.39</a></p>
-            <p><a href="mailto:infos@erased-studio.com" target="_blank">INFO@ERASED-STUDIO.COM</a></p>
+            <p><a href="mailto:info@erased-studio.com" target="_blank">INFO@ERASED-STUDIO.COM</a></p>
             <p><a href="https://www.instagram.com/erasedstudio/" target="_blank">@ERASEDSTUDIO</a></p>
           </div>
         </div>
@@ -64,29 +70,6 @@
     <script type="text/javascript" src="./js/UpdateTime.js"></script>
     <script type="text/javascript" src="./js/ChangeInfos.js"></script>
     <script>
-
-      // setInterval(function(){
-      //   let h1 = document.querySelectorAll('.name h1');
-      //   h1[0].innerHTML === "ER : AS : ED" ? h1[0].innerHTML = "13 : 06 : 26" : h1[0].innerHTML = "ER : AS : ED";
-      //   h1[1].innerHTML === "ST . UD . IO" ? h1[1].innerHTML = "27 . 01 . 21" : h1[1].innerHTML = "ST . UD . IO";
-      //   }, 3000);
-
-      // setInterval(function(){
-      //   let dt = new Date();
-      //   let h1 = document.querySelectorAll('.name h1');
-      //   h1[0].innerHTML === "ER : AS : ED" ? h1[0].innerHTML = (("0"+dt.getHours()).slice(-2)) +" : "+ (("0"+dt.getMinutes()).slice(-2)) +" : "+ (("0"+dt.getSeconds()).slice(-2)) : h1[0].innerHTML = "ER : AS : ED";
-      //   h1[1].innerHTML === "ST . UD . IO" ? h1[1].innerHTML = (("0"+dt.getDate()).slice(-2)) +" . "+ (("0"+(dt.getMonth()+1)).slice(-2)) +" . "+ (("0"+dt.getFullYear()).slice(-2)) : h1[1].innerHTML = "ST . UD . IO";
-      //   }, 3000);
-
-      // setInterval(function(){
-      //   let p = document.querySelectorAll('.infos p');
-      //   p[0].innerHTML === "SET DESIGN" ? p[0].innerHTML = "EPHEMERAL" : p[0].innerHTML = "SET DESIGN";
-      //   p[1].innerHTML === "CREATIVE DIRECTION" ? p[1].innerHTML = "TIMELESS" : p[1].innerHTML = "CREATIVE DIRECTION";
-      //   p[2].innerHTML === "ARCHITECTURE" ? p[2].innerHTML = "STRUCTURE" : p[2].innerHTML = "ARCHITECTURE";
-      //   }, 3000);
-
-      ///////////////////////////////////////////////////////////////////////////////////
-
       const img = document.querySelectorAll('img');
 
       function changeIm(){
@@ -130,8 +113,8 @@
         }
       }
 
-      flipLetters();
-
+      // 
+      flipLetters()
 
       // Resize the vh for mobile
       const appHeight = () => {
@@ -140,19 +123,6 @@
       }
       window.addEventListener('resize', appHeight)
       appHeight()
-
-
-
-      // const loader = document.querySelector('#loader')
-      // const content = document.querySelector('#content')
-      // // Affiche le loader par défaut
-
-      // window.addEventListener('load', (event) => {
-      //     // Afficher la page
-      //     console.log(loader);
-      //     loader.style.display = 'none';
-      //     content.style.display = 'block';
-      // });
 
     </script>
   </body>

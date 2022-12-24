@@ -1,12 +1,12 @@
-@import url('fonts/stylesheet.css');
-@import url('reset.css');
+@import url("fonts/stylesheet.css");
+@import url("reset.css");
 
 :root {
   --vh: 100vh;
 }
 
 body {
-  font-family: 'abc_favorit_monoregular', Fallback, sans-serif;
+  font-family: "abc_favorit_monoregular", Fallback, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: white;
@@ -17,17 +17,17 @@ p {
 }
 
 h1 {
-  font-family: 'abc_favorit_monobold', Fallback, sans-serif;
+  font-family: "abc_favorit_monobold", Fallback, sans-serif;
   font-weight: bold;
   font-style: normal;
   letter-spacing: 0px;
   word-spacing: -4.6vw;
   font-size: 6.71vw;
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 span {
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 .background-images {
@@ -60,14 +60,13 @@ img {
   height: calc(var(--vh, 1vh) * 94.75);
   padding: 2.62vw;
   grid-template-areas:
-      ".  .  .  .  .  ."
-      ".  .  .  .  .  ."
-      ".  .  .  .  .  ."
-      ".  .  .  .  .  ."
-      "n  n  .  inf  . co"
-      ".  .  .  .  .  .";
+    ".  .  .  .  .  ."
+    ".  .  .  .  .  ."
+    ".  .  .  .  .  ."
+    ".  .  .  .  .  ."
+    "n  n  .  inf  . co"
+    ".  .  .  .  .  .";
 }
-
 
 .name-container {
   grid-area: n;
@@ -104,7 +103,6 @@ img {
   left: -7.88vw;
 }
 
-
 .contact a {
   text-decoration: none;
   color: white;
@@ -115,19 +113,18 @@ img {
   color: white;
 }
 
-
 @media (max-width: 770px) {
   /* For a screen < 960px, this CSS will be read */
   .container {
     height: 95.65vh;
     height: calc(var(--vh, 1vh) * 95.65);
     grid-template-areas:
-        "inf inf inf .  .  ."
-        ".  .  .  .  .  ."
-        ".  .  .  .  .  ."
-        ".  .  .  .  .  ."
-        "n  n  n  .  .  ."
-        "co co co .  .  .";
+      "inf inf inf .  .  ."
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+      "n  n  n  .  .  ."
+      "co co co .  .  .";
   }
 
   h1 {
@@ -147,6 +144,10 @@ img {
   .contact {
     left: 0.32vw;
   }
+
+  #pictureFour {
+    width: 209vw;
+  }
 }
 
 @media (max-width: 520px) {
@@ -156,22 +157,21 @@ img {
     min-height: calc(var(--vh, 1vh) * 97.15);
   }
 
-  #pictureFive {
+  #pictureSix {
     width: 250vw;
-  }
-
-  #pictureEight {
-    width: 179vw;
   }
 
   #pictureTwelve {
+    width: 179vw;
+  }
+
+  #pictureSeventeen {
     width: 250vw;
   }
 
-  #pictureFourteen {
+  #pictureEighteen {
     width: 167vw;
   }
-
 }
 
 @media (orientation: landscape) {
@@ -179,12 +179,12 @@ img {
     height: 94.75vh;
     height: calc(var(--vh, 1vh) * 94.75);
     grid-template-areas:
-        ".  .  .  .  .  ."
-        ".  .  .  .  .  ."
-        ".  .  .  .  .  ."
-        ".  .  .  .  .  ."
-        "n  n  .  inf  . co"
-        ".  .  .  .  .  .";
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+      "n  n  .  inf  . co"
+      ".  .  .  .  .  .";
   }
 
   h1 {
