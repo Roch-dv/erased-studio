@@ -113,6 +113,11 @@ img {
   color: white;
 }
 
+.contact-roch {
+  color: transparent;
+  position: relative;
+}
+
 @media (max-width: 770px) {
   /* For a screen < 960px, this CSS will be read */
   .container {
