@@ -9,7 +9,7 @@ body {
   font-family: "abc_favorit_monoregular", Fallback, sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: white;
+  color: black;
 }
 
 p {
@@ -53,14 +53,14 @@ img {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-rows: repeat(6, 1fr);
   width: 94.75vw;
   height: 94.75vh;
   height: calc(var(--vh, 1vh) * 94.75);
   padding: 2.62vw;
   grid-template-areas:
-    ".  .  .  .  .  ."
+    "w  w  .  .  .  ."
     ".  .  .  .  .  ."
     ".  .  .  .  .  ."
     ".  .  .  .  .  ."
@@ -83,6 +83,11 @@ img {
   position: relative;
 }
 
+.under-construct {
+  grid-area: w;
+  position: relative;
+}
+
 .name {
   position: absolute;
   bottom: -9px;
@@ -97,6 +102,11 @@ img {
   bottom: 0px;
 }
 
+.w {
+  position: absolute;
+  bottom: 0px;
+}
+
 .contact {
   position: absolute;
   bottom: 0px;
@@ -105,12 +115,12 @@ img {
 
 .contact a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .contact a:hover {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .contact-roch {
@@ -127,9 +137,9 @@ img {
       "inf inf inf .  .  ."
       ".  .  .  .  .  ."
       ".  .  .  .  .  ."
-      ".  .  .  .  .  ."
+      "w  w  w  w  .  ."
       "n  n  n  .  .  ."
-      "co co co .  .  .";
+      "co co co co  .  .";
   }
 
   h1 {
@@ -184,7 +194,7 @@ img {
     height: 94.75vh;
     height: calc(var(--vh, 1vh) * 94.75);
     grid-template-areas:
-      ".  .  .  .  .  ."
+      "w  w  .  .  .  ."
       ".  .  .  .  .  ."
       ".  .  .  .  .  ."
       ".  .  .  .  .  ."

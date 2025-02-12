@@ -18,7 +18,7 @@
 
   <body>
     <div class="background-images">
-      <img class="" src="images/0.jpg" alt="ERASED">
+      <!-- <img class="" src="images/0.jpg" alt="ERASED">
       <img class="" src="images/1.jpg" alt="ERASED">
       <img class="" src="images/2.jpg" alt="ERASED">
       <img class="" src="images/3.jpg" alt="ERASED">
@@ -36,8 +36,8 @@
       <img class="" src="images/15.jpg" alt="ERASED">
       <img class="" src="images/16.jpg" alt="ERASED">
       <img class="" src="images/17.jpg" id="pictureSeventeen" alt="ERASED">
-      <img class="" src="images/18.jpg" id="pictureEighteen" alt="ERASED">
-      <img class="showing-image" src="images/19.jpg" alt="ERASED">
+      <img class="" src="images/18.jpg" id="pictureEighteen" alt="ERASED"> -->
+      <!-- <img class="showing-image" src="images/19.jpg" alt="ERASED"> -->
 
       <div class="container">
         <div class="name-container">
@@ -49,6 +49,7 @@
             <h1><span>S</span><span>T</span> . <span>U</span><span>D</span> . <span>I</span><span>O</span></h1>
           </div>
         </div>
+      
         <div class="infos-container">
           <div class="infos">
             <p><span>S</span><span>E</span><span>T</span><span> </span><span>D</span><span>E</span><span>S</span><span>I</span><span>G</span><span>N</span></p>
@@ -58,9 +59,14 @@
         </div>
         <div class="contact-container">
           <div class="contact">
-            <p><a href="tel:+32493646839" target="_blank">+32.493.64.68.39</a></p>
             <p><a href="mailto:info@erased-studio.com" target="_blank">INFO@ERASED-STUDIO.COM</a></p>
+            <p><a href="mailto:job@erased-studio.com" target="_blank">APPL. JOB@ERASED-STUDIO.COM</a></p>
             <p><a href="https://www.instagram.com/erasedstudio/" target="_blank">@ERASEDSTUDIO</a></p>
+          </div>
+        </div>
+        <div class="under-construct">
+          <div class="w">
+            <p>WEBSITE COMING SOON...</p>
           </div>
         </div>
         <div class="contact-roch">
@@ -77,19 +83,19 @@
     <script type="text/javascript" src="./js/UpdateTime.js"></script>
     <script type="text/javascript" src="./js/ChangeInfos.js"></script>
     <script>
-      const img = document.querySelectorAll('img');
+      // const img = document.querySelectorAll('img');
 
-      function changeIm(){
-        old = document.querySelectorAll('.showing-image')
+      // function changeIm(){
+      //   old = document.querySelectorAll('.showing-image')
 
-        if (old[0].nextElementSibling.localName === "img"){
-          old[0].nextElementSibling.classList.add('showing-image');
-          old[0].classList.remove('showing-image');
-        } else {
-          img[0].classList.add('showing-image');
-          old[0].classList.remove('showing-image');
-        }
-      }
+      //   if (old[0].nextElementSibling.localName === "img"){
+      //     old[0].nextElementSibling.classList.add('showing-image');
+      //     old[0].classList.remove('showing-image');
+      //   } else {
+      //     img[0].classList.add('showing-image');
+      //     old[0].classList.remove('showing-image');
+      //   }
+      // }
 
       function GetAllSpan(){
         return document.querySelectorAll('.name span');
@@ -105,11 +111,11 @@
         let x = 0;
 
         while (x < 50){
-          changeIm();
+          // changeIm();
           HoursToName();
           ChangeInfos();
           await sleep(7000);
-          changeIm();
+          // 
           NameToHours();
           ChangeInfos();
           // This line should have a function that update every second the time during 5sec then stop
